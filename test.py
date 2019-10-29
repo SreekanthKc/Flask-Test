@@ -17,6 +17,10 @@ class TestHello(unittest.TestCase):
         self.assertEqual(rv.status, '200 OK')
         self.assertEqual(rv.data, b'Hello World!\n')
 
+    def test_hi(self):
+        rv = self.app.get('/hi/')
+        self.assertEqual(rv.status, '200 OK')
+        self.assertEqual(rv.data, b'hi!\n')
 
 if __name__ == '__main__':
     unittest.main()

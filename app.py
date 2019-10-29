@@ -7,6 +7,10 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello World!\n'
 
+
+@app.route('/hi/')
+def hi():
+    return 'hi!\n'
 @app.route('/hello/<username>') # dynamic route
 def hello_user(username):
     return 'Why Hello %s!\n' % username
